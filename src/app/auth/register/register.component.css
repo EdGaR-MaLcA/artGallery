@@ -1,0 +1,41 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mat-card {
+    width: 50%;
+}
+
+.input-container {
+    margin: 10px 0;
+}
+
+.mat-form-field {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.mat-card-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  } 
+
+  .back-link {
+    margin-right: auto; 
+    margin-left: 20px; 
+}
+
+.form-and-back-container {
+    display: flex;
+    align-items: flex-start; /* Alinear elementos arriba */
+    justify-content: center;
+    width: 50%;
+    margin: 0 20px; 
+}

@@ -1,0 +1,19 @@
+header {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdZaDaT_QSBM2l3abTsOzRCp-qVvwFXIVmqw&usqp=CAU);
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif; 
+    font-size: 18px;
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+

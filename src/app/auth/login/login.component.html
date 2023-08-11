@@ -1,0 +1,49 @@
+<div class="form-center-container">
+<form [formGroup]="loginForm" class="form-container">
+  <p>{{loginError}}</p>
+  <a mat-button color="warn" routerLink="/inicio">
+    <mat-icon>arrow_back</mat-icon>
+    Back
+</a>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Log In</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Usuario</mat-label>
+              <input formControlName="username" matInput placeholder="Email Address" required="true">
+            </mat-form-field>
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger error-message">
+              <div *ngIf="username.errors?.['required']">
+                  El Email es requerido.
+              </div>
+              <div *ngIf="username.errors?.['email']">
+                  El Email debe tener un formato válido.
+              </div>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Contraseña</mat-label>
+              <input  formControlName="password" matInput placeholder="Password" type="password" required="true">
+            </mat-form-field>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="text-danger">
+                <div *ngIf="password.errors?.['required']">
+                    El Password es requerido.
+                </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <p class="register-link">¿No tienes cuenta? <a routerLink="/registro">Regístrate</a></p>
+        <button type="submit" (click)="login()" mat-raised-button color="primary">Iniciar Sesión</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

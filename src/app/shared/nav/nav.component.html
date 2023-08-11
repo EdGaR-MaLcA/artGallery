@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <div class="container">
+    <span>Arte y Cultura</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a *ngIf="!userLoginOn" mat-menu-item routerLink="/inicio">Home</a>
+      <a *ngIf="!userLoginOn" mat-menu-item routerLink="/iniciar-sesion">Inicar Sesión</a>
+      <a *ngIf="userLoginOn && isAdminUser()" mat-menu-item routerLink="/add-picture">Agregar Picture</a>
+      <a *ngIf="userLoginOn" mat-menu-item routerLink="/dashboard">Votacion</a>
+      <a *ngIf="userLoginOn" mat-menu-item routerLink="/results">Resultados</a>
+      <a *ngIf="userLoginOn" mat-menu-item (click)="logout()">Cerrar Sesión</a>
+    </mat-menu>
+  </div>
+</mat-toolbar>

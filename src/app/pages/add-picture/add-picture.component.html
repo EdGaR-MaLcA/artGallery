@@ -1,0 +1,54 @@
+<app-nav></app-nav>
+<form [formGroup]="addPictureForm" class="form-container">
+    <div class="form-and-back-container">
+        <a mat-button color="warn" routerLink="/dashboard" class="back-link">
+            <mat-icon>arrow_back</mat-icon>
+            Back
+        </a>
+    </div>
+    <div id="alert" class="alert"></div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Agregar Picture</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="input-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Titulo</mat-label>
+                    <input formControlName="title" matInput placeholder="Title">
+                </mat-form-field>
+            </div>
+  
+            <div class="input-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Artista</mat-label>
+                    <input formControlName="artist" matInput placeholder="Artist">
+                </mat-form-field>
+            </div>
+  
+            <div class="input-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Ciudad del Artista</mat-label>
+                    <input formControlName="city" matInput placeholder="City of Artist">
+                </mat-form-field>
+            </div>
+  
+            <div class="input-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Url de Imagen</mat-label>
+                    <input formControlName="url" matInput placeholder="Picture URL">
+                </mat-form-field>
+            </div>
+  
+            <div class="input-container">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Descripcion</mat-label>
+                    <input formControlName="description" matInput placeholder="Description">
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" (click)="add()" mat-raised-button color="primary">Agregar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

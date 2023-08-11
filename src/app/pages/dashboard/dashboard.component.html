@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div class="content">
+  <div class="text">
+    <div *ngIf="userLoginOn">
+        <p >Bienvenido, {{ userData?.firstname }} {{ userData?.lastname }}</p>
+      </div>
+      <div *ngIf="!userLoginOn">
+        <p>No has iniciado sesión</p>
+      </div>
+  </div>
+  <div class="card-container">
+    <div *ngFor="let image of pictures; let index = index" class="card">
+      <div class="image-container">
+        <img [src]="image.url" alt="{{ image.title }}" class="card-image">
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">{{ image.title }}</h3>
+        <p class="card-artist">{{ image.artist }}</p>
+        <button (click)="vote(image.id)" class="vote-button">
+          <i class="fa fa-heart"></i> {{ image.votes }}
+        </button>
+        <div *ngIf="hasVoted" class="voted-message">
+          {{ votedMessage }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

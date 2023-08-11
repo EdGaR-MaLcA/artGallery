@@ -1,0 +1,12 @@
+.container{
+    margin-top: 20px;
+    position: relative;
+    height: 90vh;
+}
+
+p{ margin: 10px; font-size: 20px; padding: 10px; text-align: center;}
+
+.image-center {
+    display: block;
+    margin: 0 auto;
+  }
