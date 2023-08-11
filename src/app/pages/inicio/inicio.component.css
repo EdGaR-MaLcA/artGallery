@@ -4,7 +4,7 @@
     height: 100vh;
 }
 
-p{ margin: 10px; font-size: 20px; padding: 10px; text-align: center;}
+p{ margin: 10px; font-size: 20px; padding: 10px; text-align: center; margin-top: 100px;}
 
 .image-center {
     display: block;
