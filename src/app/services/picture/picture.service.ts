@@ -10,7 +10,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class PictureService {
 
-  private baseUrl = 'http://localhost:8080/api/v1/votacion/pictures';
+  private baseUrl = 'https://nas-consulting-project-production.up.railway.app/api/v1/votacion/pictures';
 
   constructor(private http: HttpClient) { }
 

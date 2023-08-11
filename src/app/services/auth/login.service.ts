@@ -20,7 +20,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(credentials:LoginRequest):Observable<AuthResponse>{
-    return this.http.post<AuthResponse>('http://localhost:8080/auth/login', credentials).pipe(
+    return this.http.post<AuthResponse>('https://nas-consulting-project-production.up.railway.app/auth/login', credentials).pipe(
     tap(() => {
       this.currentUserLoginOn.next(true);
     }),
@@ -51,7 +51,7 @@ getUserData(): Observable<UserDetails | null> {
   }
 
   register(userData: RegisterRequest): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>('http://localhost:8080/auth/register', userData).pipe(
+    return this.http.post<AuthResponse>('https://nas-consulting-project-production.up.railway.app/auth/register', userData).pipe(
       tap(() => {
         this.currentUserLoginOn.next(true);
       }),
